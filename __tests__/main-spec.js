@@ -131,3 +131,11 @@ it('should return a 2x2-to-4x4 table when start is 2 and end is 4', () => {
 it('should return null when start is bigger than end', () => {
     expect(getMultiplicationTable(6, 4)).toBe(null);
 });
+
+it('should return null when start is out of range', () => {
+    expect(getMultiplicationTable(0, 4)).toBe(null);
+});
+
+it('should return null when end is out of range', () => {
+    expect(getMultiplicationTable(1, 10000)).toBe(null);
+});
